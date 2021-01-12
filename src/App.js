@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 function Hero(props) {
     return (
-        <div id="inicio" className="w-full bg-gray-200 h-screen p-4">
-            hero
+        <div id="inicio" className={`w-full h-screen p-4 flex items-center justify-center bg-gradient-to-br from-white to-pink-400`}>
+            <div className="flex flex-col w-full items-center justify-start">
+                <img className="" src="logo.png" />
+            </div>
+            <div className="flex flex-col w-full items-center justify-start">
+                <div className="font-xs">Desarrollamos soluciones inteligentes.</div>
+                <div className="flex items-center justify-center m-2 p-2 rounded border-black text-black border-4 cursor-pointer hover:border-white hover:text-white transform transition-all hover:scale-110 motion-reduce:transform-none"><i className="ri-whatsapp-line"/> Contactate con nosotros</div>
+            </div>
         </div>
     );
 }
@@ -30,8 +36,8 @@ function Ejemplos(props){
     return (
         <div id="ejemplos" className="w-full bg-red-200 h-screen p-4 flex items-center justify-center relative">
             <div className="w-full flex absolute bottom-2 left-0 items-center justify-center">{activo()}</div>
-            <div onClick={()=>anterior()}>
-                Atr
+            <div className="m-2 p-2" onClick={()=>anterior()}>
+                <i className="ri-arrow-drop-left-line text-3xl font-bold" />
             </div>
             <div className="flex flex-col items-center justify-center w-full">
                 <div className="h-full">{lista[pos]}</div> 
@@ -89,6 +95,7 @@ function Pie(props){
     return (
         <div className="w-full bg-blue-200 p-4">
             pie de pagina <span className={estilo()}>telefono pa</span>
+            <img src="texto.png" />
         </div>
     );
 }
@@ -96,9 +103,9 @@ function TogleMenu(props){
     let [estilo,setEstilo] = useState("");
     useEffect(()=>{
         if (!props.togle){
-            setEstilo("hidden");
+            setEstilo("hidden transition-all");
         } else {
-            setEstilo("z-40 absolte top-0 left-0 w-screen h-screen bg-red-500 text-white flex flex-col items-center justify-center");
+            setEstilo("z-40 transtition-all absolte top-0 left-0 w-screen h-screen bg-red-500 text-white flex flex-col items-center justify-center");
         }
     },[props.togle]);
     return (
@@ -119,16 +126,16 @@ function Menu(props){
     }
     function boton(){
         if (open){
-            return <div>M.A</div>
+            return <div className=" text-white  transform transition-all hover:scale-110 motion-reduce:transform-none border-white border-4 m-2 p-2 flex items-center justify-center rounded "><i className="ri-close-line text-3xl" /></div>
         } else {
-            return <div>M.C</div>
+            return <div className=" border-black  transform transition-all hover:scale-110 motion-reduce:transform-none border-4 m-2 p-2 flex items-center justify-center rounded"><i className="ri-menu-2-line text-3xl" /></div>
         }
     }
     function graph(){
         if (val === 1){
-            return <a href='#inicio' className="z-400 cursor-pointer">Arriba</a>
+            return <a href='#inicio' className="z-400 transform transition-all hover:scale-110 motion-reduce:transform-none cursor-pointer text-3xl border-black border-4 m-2 p-2 flex items-center justify-center rounded"><i className="ri-arrow-drop-up-line" /></a>
         } else{
-            return <div className="z-100 cursor-pointer absolute top-2 left-2" onClick={()=>togle()} >{boton()}</div>
+            return <div className="z-100 cursor-pointer absolute top-0 left-0" onClick={()=>togle()} >{boton()}</div>
         }
     }
     useEffect(()=>{
@@ -160,7 +167,7 @@ function App() {
 
     return (
     <div className="w-full flex flex-col items-center justify-start relative"> 
-        <Hero />
+        <Hero scroll={scroll} />
         <Ejemplos />
         <Programas />
         <Pie scroll={scroll} />
