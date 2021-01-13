@@ -26,24 +26,28 @@ function Ejemplos(props){
     }
      function activo(){
         return lista.map((item,i)=>{
-            let estado = (pos == i?"m-2 w-4 h-4 rounded-full bg-green-500":"m-2 w-4 h-4 rounded-full bg-red-500");
+            let estado = (pos == i?"relative m-2 w-4 h-4 rounded-full bg-black":"m-2 w-4 h-4 rounded-full bg-black");
             return (
-                <div className={estado}></div>
+                <> 
+                <div className={estado}>
+                     {(pos === i?<div className="absolute top-0 left-0 bg-red-500 opacity-70 animate-ping rounded-full h-4 w-4"></div>:<div></div>)}
+                </div>
+                </>
             );
         });
     }
 
     return (
-        <div id="ejemplos" className="w-full bg-red-200 h-screen p-4 flex items-center justify-center relative">
+        <div id="ejemplos" className="w-full h-screen p-4 flex items-center justify-center relative bg-gradient-to-tr from-white to-pink-400">
             <div className="w-full flex absolute bottom-2 left-0 items-center justify-center">{activo()}</div>
             <div className="m-2 p-2" onClick={()=>anterior()}>
-                <i className="ri-arrow-drop-left-line text-3xl font-bold" />
+                <i className="ri-arrow-drop-left-line text-3xl font-bold transition-all active:bg-red-400 rounded-full cursor-pointer" />
             </div>
             <div className="flex flex-col items-center justify-center w-full">
                 <div className="h-full">{lista[pos]}</div> 
             </div>
             <div onClick={()=>siguiente()}>
-                Sig
+                <i className="ri-arrow-drop-right-line text-3xl font-bold transition-all active:bg-red-400 rounded-full cursor-pointer" />
             </div>
         </div>
     );
@@ -59,26 +63,30 @@ function Programas(props){
         let nueva = (pos - 1<=0?0:pos-1);
         setPos(nueva);
     }
-
-    function activo(){
+     function activo(){
         return lista.map((item,i)=>{
-            let estado = (pos == i?"m-2 w-4 h-4 rounded-full bg-green-500":"m-2 w-4 h-4 rounded-full bg-red-500");
+            let estado = (pos == i?"relative m-2 w-4 h-4 rounded-full bg-black":"m-2 w-4 h-4 rounded-full bg-black");
             return (
-                <div className={estado}></div>
+                <> 
+                <div className={estado}>
+                     {(pos === i?<div className="absolute top-0 left-0 bg-red-500 opacity-70 animate-ping rounded-full h-4 w-4"></div>:<div></div>)}
+                </div>
+                </>
             );
         });
     }
+
     return (
-        <div id="programas" className="w-full bg-green-200 h-screen p-4 flex items-center justify-center relative">
-            <div className="w-full absolute left-0 bottom-2 flex items-center justify-center">{activo()}</div>
-            <div onClick={()=>anterior()}>
-                Atr
+        <div id="programas" className="w-full h-screen p-4 flex items-center justify-center relative bg-gradient-to-br from-white to-pink-400">
+            <div className="w-full flex absolute bottom-2 left-0 items-center justify-center">{activo()}</div>
+            <div className="m-2 p-2" onClick={()=>anterior()}>
+                <i className="ri-arrow-drop-left-line text-3xl font-bold transition-all active:bg-red-400 rounded-full cursor-pointer" />
             </div>
-            <div className="flex flex-col items-center justify-center w-full relative">
+            <div className="flex flex-col items-center justify-center w-full">
                 <div className="h-full">{lista[pos]}</div> 
             </div>
             <div onClick={()=>siguiente()}>
-                Sig
+                <i className="ri-arrow-drop-right-line text-3xl font-bold transition-all active:bg-red-400 rounded-full cursor-pointer" />
             </div>
         </div>
     );
@@ -118,7 +126,7 @@ function TogleMenu(props){
 }
 function Menu(props){
     let [open,setOpen] = useState(false);
-    let [vieja,setVieja] = useState("");
+    let [estilo,setEstilo] = useState("bg-red-300 w-full h-screen");
     let val = props.val;
     function togle(){
         let nuevo = !open;
@@ -140,16 +148,19 @@ function Menu(props){
     }
     useEffect(()=>{
         if (open){
-            if (vieja !== window.location.href){
-                setOpen(false);
-                setVieja(window.location.href);
-            }
+            setEstilo("absolute left-0 top-0 w-full h-screen bg-pink-300 flex items-center justify-center flex-col");
+        } else {
+            setEstilo("hidden")
         }
     })
     return (
         <div className="fixed top-0 left-0">
             {graph()}
-            <TogleMenu togle={open} />
+            <div className={estilo}>
+                <a onClick={()=>togle()} href="#inicio">Inicio</a>
+                <a onClick={()=>togle()} href="#ejemplos">Ejemplos</a>
+                <a onClick={()=>togle()} href="#programas">Programas</a>
+            </div>
         </div>
     );
 }
