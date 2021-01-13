@@ -1,10 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html{
+    scroll-snap-type: y mandatory;
+}
 body {
+    scroll-snap-type: y mandatory;
     margin: 0;
     padding:0;
+    overflow-x: hidden;
     scroll-behavior: smooth;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.snap-scroll {
+    scroll-snap-align: start;
 }

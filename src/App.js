@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 function Hero(props) {
     return (
-        <div id="inicio" className={`w-full h-screen p-4 flex items-center justify-center bg-gradient-to-br from-white to-pink-400`}>
+        <div id="inicio" className={`snap-scroll w-full h-screen p-4 flex items-center justify-center bg-gradient-to-br from-white to-pink-400`}>
             <div className="flex flex-col w-full items-center justify-start">
                 <img className="" src="logo.png" />
             </div>
@@ -38,7 +38,7 @@ function Ejemplos(props){
     }
 
     return (
-        <div id="ejemplos" className="w-full h-screen p-4 flex items-center justify-center relative bg-gradient-to-tr from-white to-pink-400">
+        <div id="ejemplos" className="snap-scroll w-full h-screen p-4 flex items-center justify-center relative bg-gradient-to-tr from-white to-pink-400">
             <div className="w-full flex absolute bottom-2 left-0 items-center justify-center">{activo()}</div>
             <div className="m-2 p-2" onClick={()=>anterior()}>
                 <i className="ri-arrow-drop-left-line text-3xl font-bold transition-all active:bg-red-400 rounded-full cursor-pointer" />
@@ -77,7 +77,7 @@ function Programas(props){
     }
 
     return (
-        <div id="programas" className="w-full h-screen p-4 flex items-center justify-center relative bg-gradient-to-br from-white to-pink-400">
+        <div id="programas" className="snap-scroll w-full h-screen p-4 flex items-center justify-center relative bg-gradient-to-br from-white to-pink-400">
             <div className="w-full flex absolute bottom-2 left-0 items-center justify-center">{activo()}</div>
             <div className="m-2 p-2" onClick={()=>anterior()}>
                 <i className="ri-arrow-drop-left-line text-3xl font-bold transition-all active:bg-red-400 rounded-full cursor-pointer" />
@@ -89,7 +89,7 @@ function Programas(props){
                 <i className="ri-arrow-drop-right-line text-3xl font-bold transition-all active:bg-red-400 rounded-full cursor-pointer" />
             </div>
         </div>
-    );
+        );
 }
 
 function Pie(props){
@@ -101,7 +101,7 @@ function Pie(props){
         }
     }
     return (
-        <div className="w-full bg-blue-200 p-4">
+        <div className="w-full h-screen bg-white flex items-center justify-between p-4 snap-scroll">
             pie de pagina <span className={estilo()}>telefono pa</span>
             <img src="texto.png" />
         </div>
@@ -119,34 +119,36 @@ function Menu(props){
     function boton(){
         if (open){
             return <div className=" text-white  transform transition-all hover:scale-110 motion-reduce:transform-none border-white border-4 m-2 p-2 flex items-center justify-center rounded "><i className="ri-close-line text-3xl" /></div>
-        } else {
+            } else {
             return <div className=" border-black  transform transition-all hover:scale-110 motion-reduce:transform-none border-4 m-2 p-2 flex items-center justify-center rounded"><i className="ri-menu-2-line text-3xl" /></div>
         }
+        if (!open && val == 1){
+            return <div className=" border-black  transform transition-all hover:scale-110 motion-reduce:transform-none border-4 m-2 p-2 flex items-center justify-center rounded"><i className="ri-arrow-drop-up-line"/></div>
+        }
+    }
+    function goInicio(){
+        window.scrollTo(0,0);
     }
     function graph(){
-        if (val === 1){
-            return <a href='#inicio' className="z-400 transform transition-all hover:scale-110 motion-reduce:transform-none cursor-pointer text-3xl border-black border-4 m-2 p-2 flex items-center justify-center rounded"><i className="ri-arrow-drop-up-line" /></a>
-        } else{
             return <div className="z-100 cursor-pointer absolute top-0 left-0" onClick={()=>togle()} >{boton()}</div>
-        }
     }
     useEffect(()=>{
         if (open){
-            setEstilo("transition-all fixed left-0 top-0 w-screen h-screen bg-red-300 flex items-center justify-center flex-col");
+            setEstilo("w-screen h-screen");
         } else {
-            setEstilo("transition-all w-0 h-0 bg-white")
+            setEstilo("w-0 h-0 hidden")
         }
     })
-    var aclass = "text-2xl m-2 text-white transition-all transform hover:scale-110 motion-reduce:transfrom-none";
+    var aclass = "text-2xl m-2 text-white transition-all transform hover:scale-110 motion-reduce:transform-none";
     return ( 
         <>
-            <div className={estilo}>
+            <div className={`fixed bg-pink-400 transition-all flex items-center justify-center flex-col ${estilo}`}>
                 <a className={aclass} onClick={()=>togle()} href="#inicio">Inicio</a>
                 <a className={aclass} onClick={()=>togle()} href="#ejemplos">Ejemplos</a>
                 <a className={aclass} onClick={()=>togle()} href="#programas">Programas</a>
             </div>
             <div className="fixed top-0 left-0">
-                {graph()} 
+                {graph()}
             </div>
         </>
     );
