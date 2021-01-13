@@ -107,23 +107,7 @@ function Pie(props){
         </div>
     );
 }
-function TogleMenu(props){
-    let [estilo,setEstilo] = useState("");
-    useEffect(()=>{
-        if (!props.togle){
-            setEstilo("hidden transition-all");
-        } else {
-            setEstilo("z-40 transtition-all absolte top-0 left-0 w-screen h-screen bg-red-500 text-white flex flex-col items-center justify-center");
-        }
-    },[props.togle]);
-    return (
-        <div className={estilo}>
-            <a href="#inicio">Inicio</a>
-            <a href="#ejemplos">Ejemplos</a>
-            <a href="#programas">Programas</a>
-        </div>
-    );
-}
+
 function Menu(props){
     let [open,setOpen] = useState(false);
     let [estilo,setEstilo] = useState("bg-red-300 w-full h-screen");
@@ -148,20 +132,23 @@ function Menu(props){
     }
     useEffect(()=>{
         if (open){
-            setEstilo("absolute left-0 top-0 w-full h-screen bg-pink-300 flex items-center justify-center flex-col");
+            setEstilo("transition-all fixed left-0 top-0 w-screen h-screen bg-red-300 flex items-center justify-center flex-col");
         } else {
-            setEstilo("hidden")
+            setEstilo("transition-all w-0 h-0 bg-white")
         }
     })
-    return (
-        <div className="fixed top-0 left-0">
-            {graph()}
+    var aclass = "text-2xl m-2 text-white transition-all transform hover:scale-110 motion-reduce:transfrom-none";
+    return ( 
+        <>
             <div className={estilo}>
-                <a onClick={()=>togle()} href="#inicio">Inicio</a>
-                <a onClick={()=>togle()} href="#ejemplos">Ejemplos</a>
-                <a onClick={()=>togle()} href="#programas">Programas</a>
+                <a className={aclass} onClick={()=>togle()} href="#inicio">Inicio</a>
+                <a className={aclass} onClick={()=>togle()} href="#ejemplos">Ejemplos</a>
+                <a className={aclass} onClick={()=>togle()} href="#programas">Programas</a>
             </div>
-        </div>
+            <div className="fixed top-0 left-0">
+                {graph()} 
+            </div>
+        </>
     );
 }
 function App() {
