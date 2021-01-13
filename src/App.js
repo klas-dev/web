@@ -95,15 +95,52 @@ function Programas(props){
 function Pie(props){
     function estilo(){
         if (props.scroll === 1){
-            return "bg-red-100";
+            return "bg-purple-100 rounded";
         } else {
             return "";
         }
     }
     return (
-        <div className="w-full h-screen bg-white flex items-center justify-between p-4 snap-scroll">
-            pie de pagina <span className={estilo()}>telefono pa</span>
-            <img src="texto.png" />
+        <div className="w-full h-screen bg-white flex items-center justify-center p-4 snap-scroll">
+            <div className="w-full flex items-start justify-between">
+                <div className="w-1/3 p-4 flex flex-col items-center justify-start">
+                    <img src="texto.png" className="mb-2" />
+                    <h3 className="font-bold text-sm mb-2">Amamos lo que hacemos.</h3>
+                    <p className="font-light text-xs">Nos gustan los retos, queremos solucionar problemas y encontrar la mejor manera de hacer mas confortable tu día a día en el trabajo.</p>
+                </div> 
+                <div className="w-full flex p-4 flex-col items-center justify-start">
+                    <div className="w-full text-md font-bold flex items-center justify-center mb-4">
+                        La tecnologia ayuda al hombre a construir de manera mas confortable y rapida sus tareas, solucionando problemas y mejorando trabajos. Nosotros somos constructores de tecnologia, te ayudamos a potenciar el rendimiento de tu negocio.
+                    </div>
+                    <div className="w-full flex items-start justify-between mb-4">
+                        <div className={`transition-all w-full flex flex-col items-center justify-start ${estilo()}`}>
+                            <h4 className="font-bold">contactate con nosotros</h4>
+                            <a>klas.contacto@gmail.com</a>
+                            <a>+54 2984247439</a>
+                        </div>
+                        <div className="w-full flex flex-col items-center justify-start">
+                            <h4 className="font-bold">Software Propio</h4>
+                            <a>Draco</a>
+                            <a>Paw5</a>
+                            <a>Denthist</a>
+                        </div>
+                        <div className="w-full flex flex-col items-center justify-start">
+                            <h4 className="font-bold">redes</h4>
+                            <div className="w-full m-2 flex items-center justify-center">
+                                <a className="cursor-pointer m-2 p-2 border-black border-2 flex items-center justify-center rounded">
+                                    <i className="ri-facebook-line" />
+                                </a>
+                                <a className="cursor-pointer m-2 p-2 border-black border-2 flex items-center justify-center rounded">
+                                    <i className="ri-instagram-line" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-full text-sm font-light flex items-center justify-center">
+                        K L A S 2021 Mar del plata, Argentina - Diseño y desarrollo de software.
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
@@ -158,9 +195,16 @@ function App() {
     let scrollPos = ()=>{
         setScroll(window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
     }
+    let hideBar = ()=>{
+        setTimeout(function(){
+		    window.scrollTo(0, 1);
+	    }, 0);
+    }
     useEffect(()=>{
+        window.addEventListener("load", hideBar);
         window.addEventListener('scroll', scrollPos, false);
         return () => {
+            window.removeEventListener("load",hideBar);
             window.removeEventListener('scroll', scrollPos);
         };
     },[])
