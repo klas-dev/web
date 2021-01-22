@@ -18,7 +18,7 @@ function Nube(){
                 <h1 className="w-full font-bold text-3xl text-center mb-1">Interfaz gráfica</h1>
                 <h1 className="w-full font-bold text-3xl text-center">100%</h1>
                 <h1 className="w-full font-bold text-3xl text-center mb-4">responsive</h1>
-                <p className="text-center">Adaptados para los distintos tipos de dispositivos para que sus usos sean más simples e intuitivos, permitiéndote ahorrar tiempo y esfuerzo.</p>
+                <p className="text-center text-lg">Adaptados para los distintos tipos de dispositivos para que sus usos sean más simples e intuitivos, permitiéndote ahorrar tiempo y esfuerzo.</p>
             </div>
         </div>
     );

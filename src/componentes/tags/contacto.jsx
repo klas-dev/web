@@ -8,7 +8,7 @@ function Nube(){
             </div>
             <div className="w-8/12 md:w-3/5 flex flex-col items-center md:items-start justify-center">
                 <h1 className="w-full font-bold text-3xl text-center mb-4">Asistencia</h1>
-                <p className="text-center">Poseen asistencia en los horarios laborales, además de soportes de documentación multimedia y escrita.</p>
+                <p className="text-center text-lg">Poseen asistencia en los horarios laborales, además de soportes de documentación multimedia y escrita.</p>
             </div>
         </div>
     );

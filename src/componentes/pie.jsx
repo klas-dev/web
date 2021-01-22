@@ -3,7 +3,7 @@ function Pie(){
     return (
         <footer style={{height:"240px"}} className="w-full p-4 flex flex-col items-center justify-center bg-pink-200 border-black border-t-4">
             <div className="w-full flex flex-col md:flex-row items-center justify-between" >
-                <img src="./texto.png" className="w-4/12 mb-4 md:w-1/12" />
+                <img src="./texto.png" className="w-4/12 mb-4 md:ml-8 md:w-2/12" />
                 <div className="flex flex-col items-start md:items-end justify-center">
                     <h2 className="text-sm font-bold md:text-lg mb-2">Construye el futuro de tu negocio junto a nosotros...</h2>
                     <a className="text-sm">klas.contacto@gmail.com</a>
