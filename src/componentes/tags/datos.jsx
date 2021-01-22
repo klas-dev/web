@@ -7,7 +7,7 @@ function Datos(){
             </div>
             <div className="w-8/12 md:w-3/5 flex flex-col items-center md:items-start justify-center">
                 <h1 className="w-full font-bold text-3xl text-center mb-4">Datos inteligentes</h1>
-                <p className="text-center text-lg">Convierte tus datos en estadísticas y valores tangibles por vos, para que puedas centrarte en hacer crecer tu negocio.</p>
+                <p className="text-center md:text-lg">Convierte tus datos en estadísticas y valores tangibles por vos, para que puedas centrarte en hacer crecer tu negocio.</p>
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ function Hero(){
             </div>
             <div className="w-3/4 md:w-2/5 p-3 m-2 md:p-5 md:ml-12 flex flex-col items-center justify-center border-black border-4 rounded">
                 <h2 className="font-bold text-xl mb-2">¿Quiénes somos?</h2>
-                <p className="text-base text-justify" style={{textJustify:"inter-character"}}>Nosotros somos constructores de tecnología, nos gustan los retos por lo que buscamos solucionar problemas de distinta índole y asi encontrar la manera más eficaz para agilizar tu trabajo y potenciar el rendimiento de tu negocio.</p>
+                <p className="text-base md:text-justify" style={{textJustify:"inter-character"}}>Nosotros somos constructores de tecnología, nos gustan los retos por lo que buscamos solucionar problemas de distinta índole y asi encontrar la manera más eficaz para agilizar tu trabajo y potenciar el rendimiento de tu negocio.</p>
             </div>
         </div>
     );
