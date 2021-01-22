@@ -1,18 +1,45 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-html{
-    scroll-snap-type: y mandatory;
-}
 body {
-    scroll-snap-type: y mandatory;
-    margin: 0;
-    padding:0;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.snap-scroll {
-    scroll-snap-align: start;
+h1,.menuitem{
+    font-family: 'MuseoModerno', cursive;
+}
+.scale-negativo{
+    --tw-scale-x: -1;
+}
+.animation-call{
+    animation: call 3s infinite;
+}
+.bg-rosa{
+    background: lightpink;
+}
+.color-rosa{
+    color: lightpink;
+}
+.animation-sliderPing{
+    animation: sliderPing 2s cubic-beizer(0,0,0.2,1) infinite;
+}
+@keyframes call{
+    from {
+        border-color:lightpink;
+        color:lightpink;
+    }
+    to{
+        border-color:black;
+        color:black;
+    }
+}
+
+@keyframes sliderPing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }

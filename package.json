@@ -1,25 +1,25 @@
 {
-  "name": "web-klass",
+  "name": "klas",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "autoprefixer": "^9.8.6",
-    "craco": "0.0.3",
-    "postcss": "^7.0.35",
+    "es6-tween": "^5.5.11",
+    "gsap": "^3.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
-    "web-vitals": "^0.2.4"
+    "react-zdog": "^1.0.11",
+    "web-vitals": "^0.2.4",
+    "zdog": "^1.1.2"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
