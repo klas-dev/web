@@ -1,6 +1,12 @@
-import {Link} from "react-router-dom";
+import {HashLink as Link} from "react-router-hash-link";
+import AsistenciaModelo from "../componentes/tags/modelos/asistenciaModelo.jsx";
+import DatosModelo from "../componentes/tags/modelos/datosModelo.jsx";
+import EvolucionModelo from "../componentes/tags/modelos/evolucionModelo.jsx";
+import InterfazModelo from "../componentes/tags/modelos/interfazModelo.jsx";
+import NubeModelo from "../componentes/tags/modelos/nubeModelo.jsx";
 
 function DracoPage(props){ 
+    window.scrollTo(0,0);
     return (
         <>
         <div className="w-full min-h-screen bg-gradient-to-b from-red-500 to-pink-400 flex flex-col items-center justify-start">
@@ -8,7 +14,13 @@ function DracoPage(props){
             <h1 className="font-bold text-3xl text-center">Draco</h1>
             <h3 className="w-9/12 font-bold text-center mb-2">Sistema de administracion y organización comercial</h3>
             <p className="w-9/12 mb-8">Este sistema busca abarcar todas las áreas administrativas de un negocio de manera sencilla y práctica.</p>
-            <div className="mb-8">logos3d</div>
+            <div className="mb-8 w-8/12 h-screen grid grid-cols-3 md:grid-cols-3 grid-rows-auto">
+                <NubeModelo rot />
+                <DatosModelo rot />
+                <EvolucionModelo rot />
+                <AsistenciaModelo rot />
+                <InterfazModelo rot />
+            </div>
             <h1 className="font-bold text-2xl mb-2">Herramientas</h1>
             <h3 className="font-bold text-xl">Administración</h3>
             <p className="w-9/12 mb-2">
@@ -31,7 +43,7 @@ calendario. El sistema realiza las cuentas automáticamente.
             <div className="mb-4">imagenes del programa</div>
         </div>
         <div className="fixed w-full flex items-center justify-between left-0 top-0 p-4">
-            <Link to="/" className="cursor-pointer"><img src="./patras.png" className="w-10 h-10" /></Link>
+            <Link to="/#programas" className="cursor-pointer"><img src="./patras.png" className="w-10 h-10" /></Link>
             <a className="w-12 h-12 border-black border-4 rounded flex items-center justify-center" href="https://wa.me/+542984247439"><i className="text-2xl ri-whatsapp-line" /></a>
         </div>
         </>

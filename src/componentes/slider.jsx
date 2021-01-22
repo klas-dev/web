@@ -41,7 +41,7 @@ function Slider(props){
         }
     }
     return (
-        <div className={`${props.conborde?"border-t-4 border-black":""} relative w-full h-screen flex flex-col items-center justify-start`}>
+        <div id={props.id} className={`${props.conborde?"border-t-4 border-black":""} relative w-full h-screen flex flex-col items-center justify-start`}>
             <div className="w-full h-full flex items-center justify-center">
                 {actual()} 
             </div>

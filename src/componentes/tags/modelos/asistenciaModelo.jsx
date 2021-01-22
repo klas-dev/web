@@ -1,7 +1,7 @@
 import {Illustration,Anchor,Shape,Box,Hemisphere,Cylinder} from "react-zdog";
 import {useRef,useEffect,useCallback,useState} from "react";
 //import useRefWithEffect from "../../../hooks/useRefWithEffect.jsx";
-function AsistenciaModelo(){
+function AsistenciaModelo(props){
     let [rot,setRot] = useState(null);
     const telefono=[
         {x:-20,y:0},
@@ -18,7 +18,7 @@ function AsistenciaModelo(){
     },[]);  
 
     useEffect(()=>{
-        if (rot){
+        if (rot && !props.rot){
             rotate();
         }
     },[rot])
@@ -26,13 +26,13 @@ function AsistenciaModelo(){
     return (
         <Illustration zoom={1.3} dragRotate={true}>
             <Anchor ref={ref} translate={{y:50}}>
-                <Shape closed={false} stroke={10} color="lightpink" path={telefono} translate={{y:-60}} />
-                <Hemisphere stroke={5} color="lightpink" diameter={20} rotate={{x:1.57}} translate={{x:-30,y:-53}} />
-                <Hemisphere stroke={5} color="lightpink" diameter={20} rotate={{x:1.57}} translate={{x:30,y:-53}} />
+                <Shape closed={false} stroke={10} color="rgba(249, 168, 212)" path={telefono} translate={{y:-60}} />
+                <Hemisphere stroke={5} color="rgba(249, 168, 212)" diameter={20} rotate={{x:1.57}} translate={{x:-30,y:-53}} />
+                <Hemisphere stroke={5} color="rgba(249, 168, 212)" diameter={20} rotate={{x:1.57}} translate={{x:30,y:-53}} />
                 <Box stroke={5} color="pink" width={3} height={25} depth={3} translate={{x:10,y:-43}} /> 
                 <Box stroke={5} color="pink" width={3} height={25} depth={3} translate={{x:-10,y:-43}} /> 
                 <Hemisphere stroke={0} color="pink" rotate={{x:1.57}} diameter={100} />
-                <Cylinder stroke={5} diameter={40} lenght={3} color="pink" backface="lightpink" translate={{y:-20,z:40}} rotate={{x:0.63}} />
+                <Cylinder stroke={5} diameter={40} lenght={3} color="pink" backface="rgba(249, 168, 212)" translate={{y:-20,z:40}} rotate={{x:0.63}} />
             </Anchor>
         </Illustration>
     );

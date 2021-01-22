@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-function Draco(){ 
+function Draco(){  
     return (
         <div className="w-full h-screen flex flex-col items-center justify-center pt-4 md:pt-0 md:justify-center bg-gradient-to-b from-red-500 to-pink-500">
             <div className="w-full flex flex-col md:flex-row items-center justify-start md:justify-center md:flex-row-reverse">

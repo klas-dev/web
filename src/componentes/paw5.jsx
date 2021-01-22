@@ -7,7 +7,7 @@ function Paw(){
         <div className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-b from-purple-200 to-purple-500">
             <div className="w-full flex flex-col md:flex-row-reverse items-center justify-center">
                 <div style={{height:"240px"}} className="w-4/12 flex flex-col items-center justify-end md:justify-center mb-4">
-                    <img src="./paw5logo.png" className="w-10/12 md:w-2/5" alt="logo de paw5" /> 
+                    <img src="./paw5logo.png" className="w-11/12 md:w-2/5" alt="logo de paw5" /> 
                 </div>
                 <div className=" w-8/12 md:w-2/5 flex flex-col items-center md:items-start justify-center">
                 <h1 className="m-2 w-full text-center text-3xl font-bold">Paw5</h1>

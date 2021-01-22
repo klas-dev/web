@@ -17,14 +17,14 @@ export default function Inicio(){
     return (
         <div className="relative w-full flex flex-col items.center justify-start">
            <Hero /> 
-            <Slider>
+            <Slider id="recursos">
                 <Nube />
                 <Escala />
                 <Datos />
                 <ContactoInteligente />
                 <Interfaz />
             </Slider>
-            <Slider conborde={true}>
+            <Slider id="programas" conborde={true}>
                 <Draco />
                 <Paw />
                 <Denthist />

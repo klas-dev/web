@@ -3,7 +3,7 @@ function Denthist(){
     return (
         <div className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-b from-green-200 to-green-500">
             <div className="w-full flex flex-col md:flex-row-reverse items-center justify-center">    
-        <div style={{height:"240px"}} className="mb-4 md:mb-0 w-6/12 md:w-2/5 flex flex-col items-center justify-end md:justify-center">
+        <div style={{height:"240px"}} className="mb-5 md:mb-0 w-6/12 md:w-2/5 flex flex-col items-center justify-end md:justify-center">
             <img className="w-3/5 md:w-4/12" src="./denthistlogo.png" alt="logo de denthist" />
             </div>
             <div className="w-8/12 md:w-2/5 flex flex-col items-center md:items-center justify-center">

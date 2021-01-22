@@ -1,9 +1,23 @@
-import {useState} from "react";
-
+import {useState,useEffect} from "react";
+import {HashLink as Link} from "react-router-hash-link";
+import {useLocation} from "react-router-dom";
 function Menu(){
+    let location = useLocation();
     let [abierto,setTogle] = useState(false);
     function togle(){
         setTogle( !abierto );
+    }
+    useEffect(()=>{
+        if (abierto){
+            setTogle(false);
+        }
+    },[location]);
+    function actual(loc){
+        if (loc === location.hash){
+            return "text-pink-400 font-semibold";
+        } else {
+            return "";
+        }
     }
     return (
         <>
@@ -13,10 +27,10 @@ function Menu(){
         }>
             <img src="./jfmt.png" className="transform scale-negativo absolute bottom-0 right-0"/>
             <div className={(abierto?"flex flex-col items-center justify-center":"hidden")}>
-                <a href="#" className="menuitem font-semibold text-pink-400 text-3xl mb-4">Inicio</a>
-                <a href="" className="menuitem text-3xl mb-4">Recursos</a>
-                <a href="" className="menuitem text-3xl mb-4">Programas</a>
-                <a href="" className="menuitem text-3xl mb-4">Contacto</a>
+                <Link to="/#" className={`menuitem ${actual("")} text-3xl mb-4`}>Inicio</Link>
+                <Link to="/#recursos" className={`menuitem ${actual("#recursos")} text-3xl mb-4`}>Recursos</Link>
+                <Link to="/#programas" className={`menuitem ${actual("#programas")} text-3xl mb-4`}>Programas</Link>
+                <Link to="/#contacto" className={`menuitem ${actual("#contacto")} text-3xl mb-4`}>Contacto</Link>
             </div>
         </div>
         <a href="https://wa.me/+542984247439" className="fixed right-4 top-4 w-12 h-12 border-black border-4 rounded flex items-center justify-center animation-call">

@@ -1,7 +1,7 @@
 import NubeModelo from "./modelos/nubeModelo.jsx";
 function Nube(){
     return (
-        <div className="w-4/5 md:w-full flex flex-col :md:flex-row items-center justify-centeri">
+        <div className="w-4/5 md:w-full flex flex-col :md:flex-row items-center justify-center">
             <div style={{height:"240px"}}  className="w-full h-1/2 flex items-center justify-center">
                 <NubeModelo /> 
             </div>

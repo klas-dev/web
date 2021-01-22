@@ -1,7 +1,7 @@
 import {Illustration,Anchor,Shape,Box} from "react-zdog";
 import {useRef,useEffect,useCallback,useState} from "react";
 //import useRefWithEffect from "../../../hooks/useRefWithEffect.jsx";
-function NubeModelo(){
+function NubeModelo(props){
     let [rot,setRot] = useState(null);
     const cable = [
         {x:0,y:0},
@@ -26,13 +26,13 @@ function NubeModelo(){
     },[]);  
 
     useEffect(()=>{
-        if (rot){
+        if (rot && !props.rot){
             rotate();
         }
     },[rot])
     
     return (
-        <Illustration dragRotate={true} zoom={1.5}>
+        <Illustration dragRotate={true} zoom={1.3}>
             <Anchor ref={ref} translate={{y:-10}}>
                 <Shape stroke={60} color="#c2bcb1" />
                 <Shape stroke={60} color="#c2bcb1" translate={{x:30}} />

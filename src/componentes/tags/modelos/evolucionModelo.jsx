@@ -1,7 +1,7 @@
 import {Illustration,Anchor,Shape,Box} from "react-zdog";
 import {useRef,useEffect,useCallback,useState} from "react";
 //import useRefWithEffect from "../../../hooks/useRefWithEffect.jsx";
-function EvolucionModelo(){
+function EvolucionModelo(props){
     let [rot,setRot] = useState(null);
     const grafico = [
         {x:0,y:0},{x:10,y:0,},
@@ -22,7 +22,7 @@ function EvolucionModelo(){
     },[]);  
 
     useEffect(()=>{
-        if (rot){
+        if (rot && !props.rot){
             rotate();
         }
     },[rot])
@@ -30,7 +30,7 @@ function EvolucionModelo(){
     return (
         <Illustration zoom={1.3} dragRotate={true}>
             <Anchor ref={ref} translate={{y:50}}>
-                <Shape stroke={5} closed={false} color="#c2bcb1" path={[{x:-50,y:-60},{x:-50,y:0},{x:50,y:0}]} />
+                <Shape stroke={8} closed={false} color="#c2bcb1" path={[{x:-50,y:-60},{x:-50,y:0},{x:50,y:0}]} />
                 <Shape translate={{x:-40}} stroke={5} closed={false} color="tomato" path={grafico} />
             </Anchor>
         </Illustration>

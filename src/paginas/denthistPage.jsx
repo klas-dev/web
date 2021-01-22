@@ -1,5 +1,6 @@
-import {Link} from "react-router-dom";
+import {HashLink as Link} from "react-router-hash-link";
 function DenthistPage(props){
+    window.scrollTo(0,0);
     return (
         <>
         <div className="w-full min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-green-200 to-green-400">
@@ -16,7 +17,7 @@ eficiente.
             <div className="mb-8">logos3d</div>
         </div> 
         <div className="fixed w-full flex items-center justify-between left-0 top-0 p-4">
-            <Link to="/" className="cursor-pointer"><img src="./patras.png" className="w-10 h-10" /></Link>
+            <Link to="/#programas" className="cursor-pointer"><img src="./patras.png" className="w-10 h-10" /></Link>
             <a className="w-12 h-12 border-black border-4 rounded flex items-center justify-center" href="https://wa.me/+542984247439"><i className="text-2xl ri-whatsapp-line" /></a>
         </div>
         </>
