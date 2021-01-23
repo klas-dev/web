@@ -33,7 +33,9 @@ todos los datos generales de sus mascotas, el último registro del
 historial y una lista de las vacunas que posee el animal y todo esto 
 desde cualquier lugar con acceso a internet. 
             </p>
-            <div className="mb-4">imagenes del programa</div>
+            <div className="mb-4">
+                <img src="./paw5/imagen1.png" alt="imagen del formulario" className="w-8/12 m-auto mb-2 mt-2" />
+            </div>
             <h3 className="font-bold text-xl">Mascotas</h3>
             <p className="w-9/12 mb-4">
                 Solo con la información básica ya se puede agregar una mascota, 
@@ -42,7 +44,9 @@ de identidad de este, y generándole un DNI dentro del sistema a
 cada animal para brindarle identidad y permitiéndole al veterinario 
 un acceso directo desde el inicio.
             </p>
-            <div className="mb-4">Imagenes del programa</div>
+            <div className="mb-4">
+                <img src="./paw5/imagen2.png" alt="imagen del programa" className="w-8/12 m-auto mb-2 mt-2" />
+            </div>
             <h3 className="font-bold text-xl">Historial</h3>
             <p className="w-9/12 mb-4">
                 Desde la planilla de la mascota, se puede ver directamente el 
@@ -52,7 +56,9 @@ solo un botón se puede agregar tanto un registro a la historia
 clínica, como a la libreta de vacunaciones a través de un simple 
 formulario.
             </p>
-        <div className="mb-4">Imagenes del programa</div>
+        <div className="mb-4">
+                <img src="./paw5/imagen3.png" alt="imagen del historial" className="w-8/12 m-auto mb-2 mt-2" />
+            </div>
 
         </div> 
         <div className="fixed w-full flex items-center justify-between left-0 top-0 p-4">
