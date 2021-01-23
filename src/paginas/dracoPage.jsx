@@ -37,7 +37,9 @@ generar documentos con firma electrónica, ver un historial de los
 movimientos del cliente y gestionar turnos por medio de un 
 calendario. El sistema realiza las cuentas automáticamente.
             </p>
-            <div className="mb-4">imagenes del programa</div>
+            <div className="mb-4">
+                <img src="./draco/imagen2.png" alt="imagen del programa de admin" className="w-8/12 m-auto mb-2 mt-2" />
+            </div>
         </div>
         <div className="fixed w-full flex items-center justify-between left-0 top-0 p-4">
             <Link to="/#programas" className="cursor-pointer"><img src="./patras.png" alt="" className="w-10 h-10" /></Link>
