@@ -57,7 +57,10 @@ momento que fue atendido y su registro de vacunación. Con tan
 solo un botón se puede agregar tanto un registro a la historia 
 clínica, como a la libreta de vacunaciones a través de un simple 
 formulario.
-            </p> 
+            </p>
+            <div className="mb-4">
+                <img src="./paw5/imagen4.png" alt="imagen del formulario" className="w-8/12 m-auto mb-2 mt-2" />
+            </div>
         </div> 
         <div className="fixed w-full flex items-center justify-between left-0 top-0 p-4">
             <Link to="/#programas" className="cursor-pointer"><img src="./patras.png" className="w-10 h-10" /></Link>
