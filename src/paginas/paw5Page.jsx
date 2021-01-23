@@ -22,7 +22,7 @@ respectivas mascotas. </p>
             <h1 className="font-bold text-2xl mb-2">Herramientas</h1>
             <h3 className="font-bold text-xl">Clientes</h3>
             <p className="w-9/12 mb-4">
-                Se encarga de presentar los balances, brindandote estadísticas de todo lo que necesites visualizar, gestionar el personal; Agregando a cada empleado con sus datos de contacto y permitiendo ver un historial de los movimientos que este genera dentro del negocio; Y el manejo de los productos y servicios; Pudiendo cargar el stock en las diferentes sucursales, editar los costos, crear agrupaciones de productos y administrar descuentos. 
+                Con un simple formulario se llenan los datos de contacto, y una vez cargado en el sistema permite tener acceso directo al whatsapp, E-mail o cada una de sus mascotas con un solo click desde la planilla personal.
             </p> 
             <div className="mb-4">imagenes del programa</div>
             <h3 className="font-bold text-xl">Libreta Digital</h3>
