@@ -3,7 +3,7 @@ function DenthistPage(props){
     window.scrollTo(0,0);
     return (
         <>
-        <div className="w-full min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-green-200 to-green-400">
+        <div className="w-full text-lg min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-green-200 to-green-400">
             <img src="./denthistlogo.png" alt="Logo de Paw5" className="m-4 mt-8 w-4/12" />
             <h1 className="text-3xl font-bold text-center">DentHist</h1>
              <h3 className="w-9/12 font-bold text-center mb-2">Herramienta administrativa orientada a odontólogos</h3>

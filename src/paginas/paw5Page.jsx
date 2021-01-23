@@ -4,7 +4,7 @@ function Paw5Page(props){
     window.scrollTo(0,0);
     return (
     <>
-        <div className="w-full min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-purple-200 to-purple-400">
+        <div className="w-full text-lg min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-purple-200 to-purple-400">
             <img src="./paw5logo.png" alt="Logo de Paw5" className="m-4 mt-8 w-4/12" />
             <h1 className="text-3xl font-bold text-center">Paw5</h1>
              <h3 className="w-9/12 font-bold text-center mb-2">Sistema de asistencia clínica para veterinarias</h3>
