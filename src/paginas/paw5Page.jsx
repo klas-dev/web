@@ -11,7 +11,14 @@ function Paw5Page(props){
              <p className="w-9/12 mb-8">Permite un acceso rápido, sencillo y claro de los datos de contacto 
 de los clientes, junto con un historial clínico y de vacunación de sus 
 respectivas mascotas. </p>
-            <div className="mb-8">logos3d</div>
+            <div className="mb-8 w-8/12 grid grid-cols-3 md:grid-cols-3 grid-rows-auto">
+                <i className="ri-cloud-fill text-5xl m-auto" />
+                <i className="ri-line-chart-fill text-5xl m-auto" />
+                <i className="ri-bar-chart-fill text-5xl m-auto" />
+                <i className="ri-phone-fill text-5xl m-auto" />
+                <i className="ri-smartphone-fill text-5xl m-auto" />
+                <i className="ri-computer-fill text-5xl m-auto" />
+            </div>
             <h1 className="font-bold text-2xl mb-2">Herramientas</h1>
             <h3 className="font-bold text-xl">Clientes</h3>
             <p className="w-9/12 mb-4">
