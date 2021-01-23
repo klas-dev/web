@@ -24,7 +24,9 @@ respectivas mascotas. </p>
             <p className="w-9/12 mb-4">
                 Con un simple formulario se llenan los datos de contacto, y una vez cargado en el sistema permite tener acceso directo al whatsapp, E-mail o cada una de sus mascotas con un solo click desde la planilla personal.
             </p> 
-            <div className="mb-4">imagenes del programa</div>
+            <div className="mb-4">
+                <img src="./paw5/imagen1.png" alt="imagen del historial" className="w-8/12 m-auto mb-2 mt-2" />
+            </div>
             <h3 className="font-bold text-xl">Libreta Digital</h3>
             <p className="w-9/12 mb-4">
               Los clientes tienen acceso a una libreta digital donde utilizando su 
@@ -34,7 +36,7 @@ historial y una lista de las vacunas que posee el animal y todo esto
 desde cualquier lugar con acceso a internet. 
             </p>
             <div className="mb-4">
-                <img src="./paw5/imagen1.png" alt="imagen del formulario" className="w-8/12 m-auto mb-2 mt-2" />
+                <img src="./paw5/imagen3.png" alt="imagen del formulario" className="w-8/12 m-auto mb-2 mt-2" />
             </div>
             <h3 className="font-bold text-xl">Mascotas</h3>
             <p className="w-9/12 mb-4">
@@ -55,11 +57,7 @@ momento que fue atendido y su registro de vacunación. Con tan
 solo un botón se puede agregar tanto un registro a la historia 
 clínica, como a la libreta de vacunaciones a través de un simple 
 formulario.
-            </p>
-        <div className="mb-4">
-                <img src="./paw5/imagen3.png" alt="imagen del historial" className="w-8/12 m-auto mb-2 mt-2" />
-            </div>
-
+            </p> 
         </div> 
         <div className="fixed w-full flex items-center justify-between left-0 top-0 p-4">
             <Link to="/#programas" className="cursor-pointer"><img src="./patras.png" className="w-10 h-10" /></Link>
