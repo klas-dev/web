@@ -10,7 +10,7 @@ function DracoPage(props){
             <h1 className="font-bold text-4xl text-center">Draco</h1>
             <h3 className="w-9/12 font-bold text-center mb-2">Sistema de administracion y organización comercial</h3>
             <p className="w-9/12 text-center mb-8">Este sistema busca abarcar todas las áreas administrativas de un negocio de manera sencilla y práctica.</p>
-            <div className="mb-8 w-8/12 grid grid-cols-3 md:grid-cols-3 grid-rows-auto">
+            <div className="mb-8 w-9/12 grid grid-cols-3 md:grid-cols-3 grid-rows-auto">
                 <i className="ri-cloud-fill text-5xl m-auto" />
                 <i className="ri-line-chart-fill text-5xl m-auto" />
                 <i className="ri-bar-chart-fill text-5xl m-auto" />
@@ -27,7 +27,7 @@ function DracoPage(props){
                 Es un herramienta restringida solo para el uso de la cuenta principal del administrador.
             </p>
             <div className="mb-4">
-                <img src="./draco/imagen1.png" alt="imagen del programa de admin" className="w-8/12 md:w-5/12 m-auto mb-2 mt-2" />
+                <img src="./draco/imagen1.png" alt="imagen del programa de admin" className="w-10/12 md:w-5/12 m-auto mb-2 mt-2" />
             </div>
             <h3 className="font-bold text-xl">Sucursal</h3>
             <p className="w-9/12 mb-4">
@@ -40,7 +40,7 @@ movimientos del cliente y gestionar turnos por medio de un
 calendario. El sistema realiza las cuentas automáticamente.
             </p>
             <div className="mb-4">
-                <img src="./draco/imagen2.png" alt="imagen del programa de admin" className="w-8/12 md:w-5/12 m-auto mb-2 mt-2" />
+                <img src="./draco/imagen2.png" alt="imagen del programa de admin" className="w-10/12 md:w-5/12 m-auto mb-2 mt-2" />
             </div>
         </div>
         <div className="fixed w-full flex items-center justify-between left-0 top-0 p-4">
