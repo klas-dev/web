@@ -3,7 +3,7 @@ function Draco(){
     return (
         <div className="w-full h-screen flex flex-col items-center justify-center pt-4 md:pt-0 md:justify-center bg-gradient-to-b from-red-500 to-pink-500">
             <div className="w-full flex flex-col md:flex-row items-center justify-start md:justify-center md:flex-row-reverse">
-                <div style={{height:"240px"}} className=" w-4/5 md:w-4/12 md:h-screen flex flex-col items-center justify-end">
+                <div className=" w-4/5 md:w-4/12 md:h-screen flex flex-col items-center justify-center">
                     <img src="./dracologo.png" className="md:w-5/12" alt="logo de draco" />
                 </div>
                 <div className="w-8/12 md:w-2/5 flex flex-col items-center md:items-start justify-center">
