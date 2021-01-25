@@ -5,7 +5,7 @@ function Paw5Page(props){
     return (
     <>
         <div className="w-full text-lg min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-purple-200 to-purple-400">
-            <img src="./paw5logo.png" alt="Logo de Paw5" className="m-4 mt-8 w-4/12" />
+            <img src="./paw5logo.png" alt="Logo de Paw5" className="m-4 mt-8 w-4/12 md:w-2/12 md:mb-8" />
             <h1 className="text-3xl font-bold text-center">Paw5</h1>
              <h3 className="w-9/12 font-bold text-center mb-2">Sistema de asistencia clínica para veterinarias</h3>
              <p className="w-9/12 mb-8">Permite un acceso rápido, sencillo y claro de los datos de contacto 
@@ -25,7 +25,7 @@ respectivas mascotas. </p>
                 Con un simple formulario se llenan los datos de contacto, y una vez cargado en el sistema permite tener acceso directo al Whatsapp, E-mail o cada una de sus mascotas con un solo click desde la planilla personal.
             </p> 
             <div className="mb-4">
-                <img src="./paw5/imagen1.png" alt="imagen del historial" className="w-8/12 m-auto mb-2 mt-2" />
+                <img src="./paw5/imagen1.png" alt="imagen del historial" className="w-8/12 md:w-5/12 m-auto mb-2 mt-2" />
             </div>
             <h3 className="font-bold text-xl">Libreta Digital</h3>
             <p className="w-9/12 mb-4">
@@ -36,7 +36,7 @@ historial y una lista de las vacunas que posee el animal y todo esto
 desde cualquier lugar con acceso a internet. 
             </p>
             <div className="mb-4">
-                <img src="./paw5/imagen3.png" alt="imagen del formulario" className="w-8/12 m-auto mb-2 mt-2" />
+                <img src="./paw5/imagen3.png" alt="imagen del formulario" className="w-8/12 md:w-5/12 m-auto mb-2 mt-2" />
             </div>
             <h3 className="font-bold text-xl">Mascotas</h3>
             <p className="w-9/12 mb-4">
@@ -47,7 +47,7 @@ cada animal para brindarle identidad y permitiéndole al veterinario
 un acceso directo desde el inicio.
             </p>
             <div className="mb-4">
-                <img src="./paw5/imagen2.png" alt="imagen del programa" className="w-8/12 m-auto mb-2 mt-2" />
+                <img src="./paw5/imagen2.png" alt="imagen del programa" className="w-8/12 md:w-5/12 m-auto mb-2 mt-2" />
             </div>
             <h3 className="font-bold text-xl">Historial</h3>
             <p className="w-9/12 mb-4">
@@ -59,7 +59,7 @@ clínica, como a la libreta de vacunaciones a través de un simple
 formulario.
             </p>
             <div className="mb-4">
-                <img src="./paw5/imagen4.png" alt="imagen del formulario" className="w-8/12 m-auto mb-2 mt-2" />
+                <img src="./paw5/imagen4.png" alt="imagen del formulario" className="w-8/12 md:w-5/12 m-auto mb-2 mt-2" />
             </div>
         </div> 
         <div className="fixed w-full flex items-center justify-between left-0 top-0 p-4">

@@ -4,7 +4,7 @@ function DenthistPage(props){
     return (
         <>
         <div className="w-full text-lg min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-green-200 to-green-400">
-            <img src="./denthistlogo.png" alt="Logo de Paw5" className="m-4 mt-8 w-4/12" />
+            <img src="./denthistlogo.png" alt="Logo de Paw5" className="m-4 mt-8 w-4/12 md:w-1/12 md:mb-8" />
             <h1 className="text-3xl font-bold text-center">DentHist</h1>
              <h3 className="w-9/12 font-bold text-center mb-2">Herramienta administrativa orientada a odontólogos</h3>
              <p className="w-9/12 mb-8">
@@ -23,7 +23,7 @@ eficiente.
                 <i className="ri-computer-fill text-5xl m-auto" />
             </div>
              <div className="w-full flex items-center justify-center">
-                 <img src="./denthist/imagen1.png" alt="imagen de denthist" className="w-8/12" />
+                 <img src="./denthist/imagen1.png" alt="imagen de denthist" className="w-8/12 md:w-4/12 md:mb-4" />
              </div>
         </div> 
         <div className="fixed w-full flex items-center justify-between left-0 top-0 p-4">
