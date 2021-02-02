@@ -6,7 +6,7 @@ function Contacto(){
                 <a href="http://www.instagram.com/klas.dev.soft" className="m-4 p-4 flex items-center justify-center border-black border-4 rounded">
                     <i className="ri-instagram-line text-3xl" />
                 </a>
-                <a href="https://www.facebook.com/klas.dev.soft" className="m-4 p-4 flex items-center justify-center border-black border-4 rounded">
+                <a href="https://www.facebook.com/klas.soft" className="m-4 p-4 flex items-center justify-center border-black border-4 rounded">
                     <i className="ri-facebook-line text-3xl" />
                 </a> 
                 <a href="https://wa.me/+542984247439" className="m-4 p-4 flex items-center justify-center border-black border-4 rounded">
