@@ -1,6 +1,6 @@
 function Hero(){
     return (
-        <div className="relative w-full h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-t from-white to-pink-300">
+        <div id="inicio" className="relative w-full h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-t from-white to-pink-300">
             
             <div className="w-full md:w-2/5 mb-4 md:mb-0 flex flex-col items-center justify-center">
                 <img src="./logo.png" alt="KLAS" className="mb-3 w-8/12" />

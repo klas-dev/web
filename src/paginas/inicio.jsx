@@ -15,23 +15,25 @@ import Paw from "../componentes/paw5.jsx";
 import Denthist from "../componentes/denthist.jsx";
 export default function Inicio(){
     return (
-        <div className="relative w-full flex flex-col items.center justify-start">
-           <Hero /> 
-            <Slider id="recursos">
-                <Nube />
-                <Escala />
-                <Datos />
-                <ContactoInteligente />
-                <Interfaz />
-            </Slider>
-            <Slider id="programas" conborde={true}>
-                <Draco />
-                <Paw />
-                <Denthist />
-            </Slider>
-            <Contacto />
-            <Pie />
-            <Menu />
+        <div className="w-screen h-screen overflow-x-hidden overflow-y-scroll">
+            <div className="relative w-full flex flex-col items.center justify-start">
+            <Hero /> 
+                <Slider id="recursos">
+                    <Nube />
+                    <Escala />
+                    <Datos />
+                    <ContactoInteligente />
+                    <Interfaz />
+                </Slider>
+                <Slider id="programas" conborde={true}>
+                    <Draco />
+                    <Paw />
+                    <Denthist />
+                </Slider>
+                <Contacto />
+                <Pie />
+                <Menu />
+            </div>
         </div>
     );
 }

@@ -27,7 +27,7 @@ function Menu(){
         }>
             <img src="./jfmt.png" className="transform scale-negativo absolute bottom-0 right-0"/>
             <div className={(abierto?"flex flex-col items-center justify-center":"hidden")}>
-                <Link to="/#" className={`menuitem ${actual("")} text-3xl mb-4`}>Inicio</Link>
+                <Link to="/#inicio" className={`menuitem ${actual("")} text-3xl mb-4`}>Inicio</Link>
                 <Link to="/#recursos" className={`menuitem ${actual("#recursos")} text-3xl mb-4`}>Recursos</Link>
                 <Link to="/#programas" className={`menuitem ${actual("#programas")} text-3xl mb-4`}>Programas</Link>
                 <Link to="/#contacto" className={`menuitem ${actual("#contacto")} text-3xl mb-4`}>Contacto</Link>
